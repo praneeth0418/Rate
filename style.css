@@ -1,0 +1,53 @@
+body
+{
+	margin:10;
+	padding:10;
+	
+}
+.rating
+{
+	position:absolute;
+	left:40%;
+	top:5.6%;
+	transform:translate(-50%,-50%) rotateY(180deg);
+	display:flex;
+}
+.rating input
+{
+		display:none;
+}
+.rating label
+{
+	display:block;
+	cursor:pointer;
+	width:18px;
+	background:#ffffff;
+}
+.rating label:before
+{
+	content:'\f005';
+	font-family:fontAwesome;
+	position:relative;
+	display:block;
+	font-size:18px;
+	color:#101010;
+}
+.rating label:after
+{
+	content:'\f005';
+	font-family:fontAwesome;
+	position:absolute;
+	display:block;
+	font-size:18px;
+	color:#e5b110;
+	top:0;
+	opacity:0;
+	transition:.5s;
+	text-shadow:0 2px 5px rgba(0,0,0,0.5);
+}
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after
+{
+	opacity:1;
+)
